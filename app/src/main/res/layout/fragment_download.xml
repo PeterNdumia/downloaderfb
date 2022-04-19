@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_tiles">
+
+    <LinearLayout
+        android:id="@+id/clMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="16.0dip">
+
+        <LinearLayout
+            android:id="@+id/llTips"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:background="@color/colorPrimary"
+            android:paddingTop="10.0dip"
+            android:paddingBottom="10.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3.0dip"
+                android:padding="16.0dip"
+                android:src="@drawable/ic_idea" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How to download videos?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="•   Share the video to Video Downloader app (or)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="•   Simply copy the link of any video"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="•   Make sure 'Auto Download Service' is running"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_template"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:visibility="visible"
+                card_view:cardCornerRadius="10.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/purl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAccent">
+
+                            <ImageView
+                                android:id="@+id/ivLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.0dip"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="12.0dip"
+                                android:src="@drawable/ic_link_24dp"
+                                android:layout_marginStart="3.0dip" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/vurl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/purl">
+
+                            <EditText
+                                android:id="@+id/etURL"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@+id/ivHelp"
+                                android:layout_toRightOf="@+id/ivLink"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:hint="Video URL here..."
+                                android:inputType="textUri"
+                                android:singleLine="true"
+                                android:textColor="@color/colorDefaultDark" />
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivHelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="3.0dip"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="12.0dip"
+                            android:src="@drawable/ic_info_outline_24dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ProgressBar
+                        android:id="@+id/pbFetchingVideo"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnDownload"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginEnd="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_marginBottom="20.0dip"
+                        android:text="Download"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="15.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16.0dip"
+                            android:text="Options"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18.0sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ic_info_include_watermark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:background="?selectableItemBackgroundBorderless"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="16.0dip"
+                                android:src="@drawable/ic_no_watermark_24dp"
+                                android:layout_alignParentStart="true" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/ic_info_include_watermark"
+                                android:layout_toRightOf="@+id/ic_info_include_watermark"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvNoWatermark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="2.0dip"
+                                    android:text="No Watermark"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16.0sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Remove watermark from downloaded video" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/chkWatermark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="16.0dip"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="16.0dip" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginLeft="56.0dip"
+                            android:background="#ffe4e4e4"
+                            android:visibility="gone"
+                            android:layout_marginStart="56.0dip" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_info_auto_download"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:background="?selectableItemBackgroundBorderless"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="16.0dip"
+                                android:src="@drawable/ic_download_24dp"
+                                android:layout_alignParentStart="true" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/ic_info_auto_download"
+                                android:layout_toRightOf="@+id/ic_info_auto_download"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="2.0dip"
+                                    android:text="Auto Download"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16.0sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Simply copy the link of video to start download" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/chkAutoDownload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="16.0dip"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="16.0dip" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llMessage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16.0dip"
+                    android:background="@drawable/toast_danger"
+                    android:orientation="vertical"
+                    android:padding="16.0dip"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvMessageTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="Message Title"
+                        android:textColor="#ffa94442"
+                        android:textSize="16.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMessageContent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Message Content"
+                        android:textColor="#ffa94442" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginRight="16.0dip"
+                    android:background="@drawable/tips_background"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="10.0dip"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:src="@drawable/ic_idea" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto Download not working?"
+                            android:textColor="@color/colorTips"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:text="•   Make sure app is running in background"
+                            android:textColor="@color/colorTips"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:text="•   Restart the app if that doesn't work"
+                            android:textColor="@color/colorTips"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:text="•   Contact developer before leaving a negative review"
+                            android:textColor="@color/colorTips"
+                            android:textSize="13.0sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvDownload"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            card_view:cardCornerRadius="4.0dip">
+
+            <LinearLayout
+                android:id="@+id/llDownload"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16.0dip">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:src="@drawable/background_tiles"
+                        card_view:civ_border_color="#ffd2d2d2"
+                        card_view:civ_border_width="1.0dip" />
+
+                    <TextView
+                        android:id="@+id/tvAuthor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:layout_toRightOf="@+id/imgAvatar"
+                        android:paddingLeft="10.0dip"
+                        android:paddingTop="4.0dip"
+                        android:text="Author"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_close_24dp" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAuthor"
+                        android:layout_toRightOf="@+id/imgAvatar"
+                        android:paddingLeft="8.0dip">
+
+                        <ImageView
+                            android:id="@+id/ivMusicNote"
+                            android:layout_width="16.0dip"
+                            android:layout_height="16.0dip"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_music_note_24dp" />
+
+                        <TextView
+                            android:id="@+id/tvMusic"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_toRightOf="@+id/ivMusicNote"
+                            android:text="Music - Author"
+                            android:textSize="12.0sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dip"
+                    android:text="Description Goes Here" />
+
+                <LinearLayout
+                    android:id="@+id/llDownloadPercentage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:max="100"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvDownloadPercentage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.0dip"
+                        android:gravity="center"
+                        android:text="Starting download..."
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDownloadCompleted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10.0dip"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnWatch"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="130.0dip"
+                        android:layout_height="50.0dip"
+                        android:text="WATCH" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/my_secondtemplate"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+    </LinearLayout>
+
+</ScrollView>

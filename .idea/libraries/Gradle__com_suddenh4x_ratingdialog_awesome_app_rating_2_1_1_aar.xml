@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.suddenh4x.ratingdialog:awesome-app-rating:2.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e956476ae7d994899ae1b53fb2d009c/awesome-app-rating-2.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e956476ae7d994899ae1b53fb2d009c/awesome-app-rating-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e956476ae7d994899ae1b53fb2d009c/awesome-app-rating-2.1.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.suddenh4x.ratingdialog/awesome-app-rating/2.1.1/e730232cd999f1fec5389d1673738af1a0de829a/awesome-app-rating-2.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.suddenh4x.ratingdialog/awesome-app-rating/2.1.1/93c3b07e1aac8e48e20d40ae8b2341473678c7cf/awesome-app-rating-2.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
